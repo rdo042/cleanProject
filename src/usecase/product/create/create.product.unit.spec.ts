@@ -3,6 +3,7 @@ import CreateProductUseCase from "./create.product.usecase";
 describe("Unit Test create product use case", () => {
 
     const input = {
+        type: "a",
         name: "Product 1",
         price: 10.0
     }

@@ -34,6 +34,7 @@ describe("Test create product integration use case", () => {
         await productRepository.create(product);
 
         const input = {
+            type: "a",
             name: product.name,
             price: product.price
         };
@@ -58,6 +59,7 @@ describe("Test create product integration use case", () => {
         await productRepository.create(product);
         
         const input = {
+            type: "a",
             name: "",
             price: product.price
         };
@@ -77,6 +79,7 @@ describe("Test create product integration use case", () => {
 
 
         const input = {
+            type: "a",
             name: product.name,
             price: -10.0
         };

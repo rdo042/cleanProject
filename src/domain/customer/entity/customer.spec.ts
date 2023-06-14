@@ -9,7 +9,7 @@ describe("Customer unit tests", () => {
 
         expect(() => {
             let customer = new Customer("", "John");
-        }).toThrowError("Id is required");
+        }).toThrowError("customer: Id is required");
 
     });
 
@@ -17,7 +17,15 @@ describe("Customer unit tests", () => {
 
         expect(() => {
             let customer = new Customer("123", "");
-        }).toThrowError("Name is required");
+        }).toThrowError("customer: Name is required");
+
+    });
+
+    it("should throw error when name  and id are empty", () => {
+
+        expect(() => {
+            let customer = new Customer("", "");
+        }).toThrowError("customer: Name is required,customer: Id is required");
 
     });
 
@@ -59,7 +67,7 @@ describe("Customer unit tests", () => {
 
             customer.activate();
 
-        }).toThrowError("Address is mandatory to activate a customer");
+        }).toThrowError("customer: Address is mandatory to activate a customer");
 
     });
 
